@@ -1,0 +1,99 @@
+@import './_variables';
+@import './_queries.scss/';
+
+html {
+    outline: none;
+}
+
+body {
+    background-image: url(../images/oGamQhz.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    font-family: lato, 'Courier New', Courier, monospace;
+    font-weight: 100;
+    height: 100vh;
+    width: 100vw;
+    @include cleanMP();
+}
+
+.grid {
+    height: 100%;
+    width: 60vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 60%;
+
+    justify-content: center;
+    align-content: center;
+}
+
+.app {
+    box-shadow: $shadow;
+    background-color: #ffffff;
+    height: 70vh;
+    width: 60vw;
+
+    @include position(center, center);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1.2fr 4fr 3fr;
+
+}
+
+.new-game {
+    grid-column-start: span 3;
+    @include position(center, center);
+
+    button {
+        border: none;
+        background-color: transparent;
+        font-family: inherit;
+        font-size: 1.7rem;
+        font-weight: 100;
+        outline: none;
+
+        i {
+            color: $red-box;
+            padding-right: 0.7rem;
+        }
+
+        &:hover {
+            @include hover-animation();
+        }
+    }
+}
+
+.player-1,
+.player-2 {
+    @include position(center, center);
+    font-size: 3.5rem;
+}
+
+.p1-score,
+.p2-score {
+    @include position(center, center);
+    font-size: 6.5rem;
+    font-weight: 100;
+    @include fill-parent(100%);
+
+    display: flex;
+
+    justify-content: center;
+
+    span {
+        margin: auto;
+    }
+}
+
+.dice {
+    @include position(center, end);
+    margin-bottom: 15%;
+    @include fill-parent(60%);
+
+    img {
+        max-width: 100%;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
+    }
+}
