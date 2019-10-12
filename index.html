@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600" rel="stylesheet" type="text/css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ec19563e4c.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="scss/style.css">
     <title>Document</title>
@@ -17,7 +16,7 @@
     <div class="grid">
         <div class="app">
             <div class="new-game">
-                <button><i class="fa fa-repeat"></i>New Game</button>
+                <button>New Game<i class="fa fa-repeat"></i></button>
             </div>
             <div class="player-1">
                 <span>Player 1</span>
@@ -36,13 +35,14 @@
             <div class="p2-score">
                 <span>0</span> </div>
             <div class="p1-current">
-
+                <span>Current</span><span>45</span>
             </div>
             <div class="controls">
-
+                <button class="roll">Roll<i class="fas fa-dice"></i></button>
+                <button class="hold">Hold<i class="fas fa-arrow-circle-down"></i></button>
             </div>
             <div class="p2-current">
-
+                <span>Current</span><span>45</span>
             </div>
         </div>
     </div>
