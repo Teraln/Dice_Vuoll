@@ -1,25 +1,48 @@
 /*Landscape*/
 
 /* Extra small devices (landscape phones, 575 and down) */
-@media (max-width: 575px) and (orientation: landscape) {}
+@media (max-width: 575px) and (orientation: landscape) {
+    html {
+        font-size: 5px;
+    }
+}
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 768px) and (orientation: landscape) {}
+@media (min-width: 576px) and (max-width: 768px) and (orientation: landscape) {
+    html {
+        font-size: 7px;
+    }
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 769px) and (max-width: 992px) and (orientation: landscape) {
+    html {
+        font-size: 8px;
+    }
 }
 
 
 /*Portrait*/
 
-@media (max-width: 340px) {}
+@media (max-width: 340px) {
+    html {
+        font-size: 7px;
+    }
+}
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (min-width: 341px) and (max-width: 575px) and (orientation: portrait) {}
+@media (min-width: 341px) and (max-width: 575px) and (orientation: portrait) {
+    html {
+        font-size: 8px;
+    }
+}
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 768px) and (orientation: portrait) {}
+@media (min-width: 576px) and (max-width: 768px) and (orientation: portrait) {
+    html {
+        font-size: 14px;
+    }
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 769px) and (max-width: 992px) and (orientation: portrait) {}
