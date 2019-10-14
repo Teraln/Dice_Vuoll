@@ -15,34 +15,38 @@
 <body>
     <div class="grid">
         <div class="app">
-            <div class="new-game">
+            <div @click="newGame" class="new-game">
                 <button>New Game<i class="fa fa-repeat"></i></button>
             </div>
-            <div class="player-1">
+            <div v-bind:class="{ active: !turn }" class="player-1">
                 <span>Player 1</span>
             </div>
             <div class="space"></div>
-            <div class="player-2">
+            <div v-bind:class="{ active: turn }" class="player-2">
                 <span>Player 2</span>
             </div>
             <div class="p1-score">
-                <span>15</span> </div>
+                <span v-text="scores[0]"></span>
+            </div>
 
             <div class="dice">
-                <img src="/images/dice-1.png">
+                <transition name="fade" mode="out-in">
+                    <img :src="`/images/dice-${currDice}.png`" :key="imgKey">
+                </transition>
             </div>
-
             <div class="p2-score">
-                <span>0</span> </div>
+                <span v-text="scores[1]"></span> </div>
             <div class="p1-current">
-                <span>Current</span><span>45</span>
+                <span>Current</span><span v-text="current[0]"></span>
             </div>
             <div class="controls">
-                <button class="roll">Roll<i class="fas fa-dice"></i></button>
-                <button class="hold">Hold<i class="fas fa-arrow-circle-down"></i></button>
+                <span v-if="message">{{ `Player ${turn + 1} Wins!` }}</span>
+                <button v-if="displayControls" @click="initRoll" class="roll">Roll<i class="fas fa-dice"></i></button>
+                <button v-if="displayControls" @click="hold" class="hold">Hold<i
+                        class="fas fa-arrow-circle-down"></i></button>
             </div>
             <div class="p2-current">
-                <span>Current</span><span>45</span>
+                <span>Current</span><span v-text="current[1]"></span>
             </div>
         </div>
     </div>

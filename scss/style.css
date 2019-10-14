@@ -1,10 +1,12 @@
 /*Variables*/
-@media (max-width: 400px) {
-  .grid {
-    width: 100vw;
-  }
-}
-
+/*Landscape*/
+/* Extra small devices (landscape phones, 575 and down) */
+/* Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up) */
+/*Portrait*/
+/* Extra small devices (portrait phones, less than 576px) */
+/* Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up) */
 html {
   outline: none;
 }
@@ -41,8 +43,8 @@ body {
   -webkit-box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
   background-color: #ffffff;
-  height: 70vh;
-  width: 60vw;
+  height: 80vh;
+  width: 80vw;
   -ms-grid-column-align: center;
       justify-self: center;
   -ms-grid-row-align: center;
@@ -122,20 +124,34 @@ body {
 }
 
 .dice {
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
-  width: 60%;
-  height: 60%;
-  margin-top: 5%;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .dice img {
-  max-width: 100%;
+  max-width: 50%;
   -webkit-box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+/*.fade-leave-active {
+    transition: 0s;
+}*/
+.fade-enter-active {
+  -webkit-transition: opacity 0.7s;
+  transition: opacity 0.7s;
+}
+
+/*.fade-leave-to */
+.fade-enter {
+  opacity: 0;
 }
 
 .p1-current,
@@ -227,5 +243,16 @@ body {
           transition-duration: 300ms;
   color: #eb4d4d;
   margin-left: 1.1em;
+}
+
+.controls span {
+  font-size: 3rem;
+  color: #505096;
+  font-weight: 400;
+}
+
+.active {
+  color: #eb4d4d !important;
+  font-weight: 500 !important;
 }
 /*# sourceMappingURL=style.css.map */

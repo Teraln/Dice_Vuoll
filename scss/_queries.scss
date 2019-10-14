@@ -1,5 +1,25 @@
-@media (max-width: 400px) {
-    .grid {
-        width: 100vw;
-    }
+/*Landscape*/
+
+/* Extra small devices (landscape phones, 575 and down) */
+@media (max-width: 575px) and (orientation: landscape) {}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 768px) and (orientation: landscape) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 769px) and (max-width: 992px) and (orientation: landscape) {
 }
+
+
+/*Portrait*/
+
+@media (max-width: 340px) {}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (min-width: 341px) and (max-width: 575px) and (orientation: portrait) {}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 768px) and (orientation: portrait) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 769px) and (max-width: 992px) and (orientation: portrait) {}
