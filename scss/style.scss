@@ -180,9 +180,11 @@ body {
     }
 
     & span {
-        font-size: 3rem;
+        font-size: 2rem;
         color: rgb(80, 80, 150);
         font-weight: 400;
+        justify-self: center;
+        text-align: center;
     }
 }
 

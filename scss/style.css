@@ -313,9 +313,12 @@ body {
 }
 
 .controls span {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #505096;
   font-weight: 400;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: auto;
 }
 
 .active {
